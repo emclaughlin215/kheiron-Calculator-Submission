@@ -98,54 +98,41 @@ _Example_
 input = '- / 10 + 1 1 * 1 2'  -> ['-', '/', '10', '+', '1', '1', '*','1', '2']
 
 operands = []; operators = []; answer = 0;
-```
 
-Loop #1
-```js
+"Loop #1"
 operands = [2]; operators = []; answer = 0;
-```
-Loop #2
-```js
+
+"Loop #2"
 operands = [2, 1]; operators = []; answer = 0;
-```
-Loop #3
-```js
+
+"Loop #3"
 operands = [2, 1]; operators = ['*']; answer = 0;
-```
-Loop #4 (2 * 1 = 2)
-```js
+
+"Loop #4 (2 * 1 = 2)"
 operands = [2]; operators = []; answer = 0;
-```
-Loop #5
-```js
+
+"Loop #5"
 operands = [2, 1]; operators = []; answer = 0;
-```
-Loop #6
-```js
+
+"Loop #6"
 operands = [2, 1, 1]; operators = []; answer = 0;
-```
-Loop #7
-```js
+
+"Loop #7"
 operands = [2, 1, 1]; operators = ['+']; answer = 0;
-```
-Loop #8 (1 + 1 = 2)
-```js
+
+"Loop #8 (1 + 1 = 2)"
 operands = [2, 2]; operators = []; answer = 0;
-```
-Loop #9
-```js
+
+"Loop #9"
 operands = [2, 2, 10]; operators = []; answer = 0;
-```
-Loop #10
-```js
+
+"Loop #10"
 operands = [2, 2, 10]; operators = ['/']; answer = 0;
-```
-Loop #11 (10 / 2 = 5)
-```js
+
+"Loop #11 (10 / 2 = 5)"
 operands = [5, 2]; operators = []; answer = 0;
-```
-Loop #12
-```js
+
+"Loop #12"
 operands = [5, 2]; operators = ['-']; answer = 0;
 ```
 
