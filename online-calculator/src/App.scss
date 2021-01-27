@@ -1,0 +1,54 @@
+@import "~@blueprintjs/core/lib/scss/variables";
+@import "~@blueprintjs/core/src/blueprint.scss";
+@import "~@blueprintjs/select/src/blueprint-select.scss";
+
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-bottom-color: $blue3;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+.Answer {
+  height: 30vh;
+  font-size: 12em;
+}
+
+.Mode {
+  background-color: $dark-gray3;
+  color: $light-gray3;
+  width: fit-content;
+}
+
+.Input {
+  width: 30vh;
+  overflow-x: scroll;
+  scrollbar-width: None;
+  border-radius: 3px;
+  border-color: $blue3;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.Calculator {
+  min-height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-left: 30vw;
+  padding-right: 30vw;
+}
