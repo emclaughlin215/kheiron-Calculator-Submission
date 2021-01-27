@@ -14,8 +14,9 @@ npm install
 </br>
 
 ### Running Tests
-From anywhere in the repository run:
+From `/` run:
 ```bash
+npm i -D ts-jest @types/jest
 npx jest
 ```
 </br>
@@ -24,11 +25,15 @@ npx jest
 ### Running it online
 From the `/online-calculator/` directory run:
 ```bash
+npm install
 npm run start
 ```
 Go to `localhost:3000/`
 
 </br>
+
+![](Khieron-Online-Calculator.png)
+
 </br>
 
 ## Solution
@@ -164,19 +169,72 @@ return answer // 3
 ### Infix
 
 </br>
-</br>
 
 _Introduction_
 
+Infix notation is what some might call standard notation. e.g.
+
+`(10 / (1 + 1)) - (1 * 2) = 3`
 
 
 </br>
 
 _The process_
 
+- Keep track of the parenthesis count for error handling.
 
+- Go through the input from right to left.
+
+    - When a closed branket is found, perform the atomic calculation on  the two operands at the end of the operand array and the operator at the end of the operator array.
+    - Append the resultant to the end of the operand array.
+
+- When we reach the end of the input array, the element left is the answer.
 
 </br>
 
 
 _Example_
+
+```js
+(10 / (1 + 1)) - (1 * 2)  
+
+-> ['(','10','/','(','1','+','1',')',')','-','(','1','*','2',')']
+
+operands = [];               operators = [];
+operands = [10];             operators = [];
+operands = [10];             operators = ['/'];
+operands = [10, 1];          operators = ['/'];
+operands = [10, 1];          operators = ['/', '+'];
+operands = [10, 1, 1];       operators = ['/'];
+
+"Closing bracket!"
+
+operands = [10, 2];          operators = ['/'];
+
+"Closing bracket!"
+
+operands = [5];              operators = [];
+operands = [5];              operators = ['-'];
+operands = [5, 1];           operators = ['-'];
+operands = [5, 1];           operators = ['-', '*'];
+operands = [5, 1, 2];        operators = ['-', '*'];
+
+"Closing bracket!"
+
+operands = [5, 2];           operators = ['-'];
+
+"Closing bracket!"
+
+operands = [3];              operators = [];
+
+Answer = 3;
+
+```
+
+<br/>
+
+<br/>
+
+## Alternate solution
+
+It is also possible to solve this using a tree structure, constructing and traversing the tree in different orders depending on if you which to perform prefix, infix or postfix calculations.
