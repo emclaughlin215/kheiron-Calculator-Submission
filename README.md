@@ -77,17 +77,17 @@ operands = []; operators = []; answer = 0;
 
 - Loop while the input array still has elements.
 
-1. Check if there are two operands and one operator in the respective arrays.
+    - Check if there are two operands and one operator in the respective arrays.
 
-    If yes, perform the operation and insert if to the start of the operand array.
+        If yes, perform the operation and insert if to the start of the operand array.
 
-2. Pop the element off the input string array and assign it to one of the two arrays appropriately.
+    - Pop the element off the input string array and assign it to one of the two arrays appropriately.
 
 - Once the input array is empty, process the rest of the operands and operators remaining in the arrays.
 
-1. Reverse the operand array to process in the correct order
+    - Reverse the operand array to process in the correct order
 
-2. Process the operations adding the result to the final answer on each occasion.
+    - Process the operations adding the result to the final answer on each occasion.
 
 - Return `answer`.
 
