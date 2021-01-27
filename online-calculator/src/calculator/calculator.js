@@ -43,6 +43,9 @@ var Calculator = /** @class */ (function () {
      * @returns void
      */
     Calculator.prototype.handleElement = function (currentElement) {
+        if (currentElement === undefined) {
+            throw new Error("String contained undefined. Element " + currentElement);
+        }
         if (this.elementIsValidOperator(currentElement)) {
             this.operators.push(currentElement);
         }
@@ -87,6 +90,9 @@ var Calculator = /** @class */ (function () {
         var operandOne = this.operands.pop();
         var operandTwo = this.operands.pop();
         var operator = this.operators.pop();
+        if ((operandOne === undefined) || (operandTwo === undefined) || (operator === undefined)) {
+            throw new Error("Could not get operators and operand to perform atomic calculation. Operands: ${this.operands}; Operators: ${this.operators}.");
+        }
         if (flipInputs) {
             return this.doCalculation(operator, operandTwo, operandOne);
         }
